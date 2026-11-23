@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cobalt: #2563EB;
+  --color-risk-high: #DC2626;
+  --color-risk-mid: #D97706;
+  --color-risk-low: #16A34A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #19201d;
+    --foreground: #edf3e9;
+  }
+}
+
+body {
+  font-family: 'Golos Text', system-ui, sans-serif;
+  background-color: #fafbf7;
+  color: #262b26;
+  line-height: 1.55;
+}
+
+button, textarea, input {
+  font-family: inherit;
+}
+
+@layer utilities {
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}

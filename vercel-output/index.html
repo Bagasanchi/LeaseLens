@@ -1,0 +1,116 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-bpD3O8ZxBYAKvtBQPqHM0TmxvZDo/0Lm2ZIhtZ8Ijo8=' 'sha256-zB/gtnSshSVEC7/zs8RLrWQi4Z8l3QCOzwk5LBMjU/M=' https://va.vercel-scripts.com; style-src 'unsafe-inline'; connect-src 'self' https://va.vercel-scripts.com; form-action 'none'; base-uri 'none'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LeaseLens — Promise checker</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 "Segoe UI",Arial,sans-serif;color:#262b26;background:#fafbf7}button,textarea,input{font:inherit}button,a{cursor:pointer}header{background:white;border-bottom:1px solid #dce0d7}nav,main,footer{max-width:1170px;margin:auto;padding:0 34px}nav{height:76px;display:flex;align-items:center;gap:32px}.brand{font-size:24px;font-weight:720;letter-spacing:-1.3px;display:flex;align-items:center;gap:9px}.mark{width:27px;height:31px;background:#334e39;clip-path:polygon(0 19%,45% 0,45% 75%,100% 53%,100% 78%,0 100%)}nav a{color:inherit;text-decoration:none;font-size:14px}.privacy{margin-left:auto;color:#425944;font-size:14px}.hero{display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:36px;padding:54px 0 44px}.tag,.kicker{font:600 12px/1.4 Consolas,monospace;letter-spacing:.13em;text-transform:uppercase;color:#566650}h1{font:500 clamp(50px,5.4vw,76px)/.99 Georgia,serif;letter-spacing:-.055em;margin:17px 0 20px}h1 em{color:#526b46;font-weight:400}.intro{max-width:455px;color:#566054;margin:0}.art{height:232px;position:relative;overflow:hidden;border-radius:17px;background-color:#e1e8d7;background-image:linear-gradient(#788c6920 1px,transparent 1px),linear-gradient(90deg,#788c6920 1px,transparent 1px);background-size:21px 21px}.page{position:absolute;left:22%;top:27px;width:50%;height:230px;background:#fffdf4;box-shadow:3px 7px 13px #34433129;border:1px solid #d4d6c7;padding:20px;transform:rotate(-9deg);font:italic 20px Georgia}.page:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 11px,#bdc3b5 11px 13px);top:69px;left:20px;right:24px;bottom:30px}.note{position:absolute;right:8%;bottom:22%;background:#f7df8e;color:#544b32;transform:rotate(7deg);padding:13px 20px;font:italic 20px Georgia;box-shadow:2px 4px 7px #3332}.note:before{content:"";position:absolute;background:#ffffff98;width:42px;height:14px;left:32%;top:-8px;transform:rotate(-6deg)}.section{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #cdd3c8;padding:25px 0 17px}h2,h3,p{margin:0}h2{font:500 30px Georgia;letter-spacing:-1px}button{border:1px solid #cad2c5;background:white;color:#334e39;padding:9px 15px;border-radius:7px;font-weight:600;font-size:14px}button:hover{background:#edf2e8}.layout{display:grid;grid-template-columns:1.38fr 1fr;gap:20px;align-items:start}.card{background:white;border:1px solid #d5dbd1;border-radius:13px;padding:25px}.card h3{font:500 23px Georgia;margin:0 0 15px}.field{display:block;font-weight:600;font-size:15px;margin-bottom:8px}textarea{resize:vertical;width:100%;border:1px solid #cbd2c6;background:#fcfdf9;padding:12px;border-radius:7px;line-height:1.45;min-height:70px;color:inherit}textarea:focus,button:focus-visible{outline:2px solid #577449;outline-offset:2px}.row{display:flex;justify-content:space-between;align-items:center;margin-top:19px;gap:10px}.link{color:#41633c;background:none;border:0;text-decoration:underline;text-underline-offset:3px;padding:4px}.primary{background:#304f38;color:white;border-color:#304f38;margin-top:14px}.primary:hover{background:#233e29}.result{background:#f0f4eb}.empty{border:1px dashed #b8c4ae;border-radius:9px;padding:28px 18px;text-align:center}.empty b{display:block;font:500 21px Georgia;margin:9px 0}.icon{font-size:27px;color:#617857}.small,footer{font-size:14px;color:#5a665a}blockquote{margin:12px 0;padding:10px 14px;background:white;border-left:3px solid #869d77;white-space:pre-wrap;overflow-wrap:anywhere}.status{font-weight:700;color:#415e39}details{margin-top:15px}summary{cursor:pointer;font-weight:600}footer{padding-top:30px;padding-bottom:25px}#message{white-space:pre-wrap;overflow-wrap:anywhere}.art,.empty{isolation:isolate}@media(max-width:740px){nav,main,footer{padding-left:18px;padding-right:18px}nav{gap:14px;height:62px}nav a{display:none}.hero,.layout{grid-template-columns:1fr}.hero{gap:22px;padding:35px 0 26px}.art{height:145px}.page{top:9px}.section h2{font-size:24px}.card{padding:18px}.section{gap:10px}.privacy{font-size:12px}}
+nav{height:auto;min-height:76px;flex-wrap:wrap;gap:12px;padding-block:10px}#language{margin-left:auto;font:inherit;border-radius:7px;padding:8px}.privacy{display:none}#theme[aria-pressed=true]{background:#47634a;color:white}html[data-theme=dark]{color-scheme:dark}html[data-theme=dark] body{background:#19201d;color:#edf3e9}html[data-theme=dark] :is(header,.card,blockquote,button,select){background:#252e29;color:#e2ebdf;border-color:#536256}html[data-theme=dark] :is(.intro,.small,.status,.tag,.link,h1 em,footer,.icon){color:#bbd2b4}html[data-theme=dark] .result{background:#29362c}html[data-theme=dark] textarea{background:#1d2520;color:#f2f5ef;border-color:#657164}html[data-theme=dark] .page{color:#304032}html[data-theme=dark] .primary{background:#345c40;color:white}@media(max-width:500px){nav{gap:6px}.brand{font-size:20px}#theme,#language{font-size:14px;padding:7px}}.library-dialog{width:min(520px,92vw);max-height:85dvh;overflow:auto;color:inherit}.library-dialog::backdrop{background:#101810a8}.library-dialog>button{display:block;margin-left:auto}.library-dialog section.card{border:0;padding:12px 0}.library-dialog [role=status]:not(:empty){border-left:4px solid #6f9361;padding:10px;font-weight:650}.library-dialog button{margin:4px}#report>button{margin-right:8px}main>button:last-child{margin-top:18px}</style>
+<header><nav><span class="brand"><i class="mark"></i>LeaseLens</span><a href="#check">Promise checker</a><select id="language" aria-label="Language"><option value="en">English</option><option value="mn">Монгол</option></select><button type="button" id="theme" aria-pressed="false">Dark mode</button></nav></header>
+<section class="card" id="gate" style="max-width:550px;margin:48px auto"><h2>Adults only</h2><p>LeaseLens is for renters aged 18 or older. Your confirmation lasts until you reload this page.</p><button class="primary" id="enter">I am 18 or older</button></section><main hidden><section class="hero"><div><div class="tag">Renter’s toolkit</div><h1>Your deal,<br><em>in writing.</em></h1><p class="intro">Compare what your landlord promised with what your lease says, before you pay the deposit.</p></div><div class="art" aria-hidden="true"><div class="page">Rental agreement</div><div class="note">Heating included?</div></div></section>
+<section id="check"><div class="section"><h2>Promise checker</h2><button id="sample">Try a sample</button></div><div class="layout"><form class="card" id="form"><label class="field" for="promise">What did your landlord promise?</label><textarea spellcheck="false" autocomplete="off" id="promise" required maxlength="1500" placeholder="E.g. Heating is included in the rent."></textarea><div class="row"><label class="field" for="lease">Lease wording</label><button type="button" id="import" class="link">Open .txt file</button></div><input type="file" id="file" accept=".txt,text/plain" hidden><textarea spellcheck="false" autocomplete="off" id="lease" maxlength="50000" rows="5" required placeholder="Paste the lease or the clauses you want to check…"></textarea><button class="primary" type="submit">Check my promise</button><span id="error" role="alert"></span></form>
+<aside class="card result" aria-live="polite"><h3>Your comparison</h3><div id="blank" class="empty"><span class="icon">▤</span><b>Start with a promise</b><p class="small">Related lease wording and a question for your landlord will appear here.</p></div><div id="report" hidden><p class="status" id="status"></p><div id="quotes"></div><p class="small" id="why"></p><hr><h4>Ask your landlord</h4><p id="message"></p><button type="button" id="copy" style="margin-top:12px">Copy question</button></div></aside></div></section>
+<details class="card"><summary>Compare a revised lease</summary><p class="small">Paste the revised wording below to see which sentences were added or removed from the lease above.</p><textarea spellcheck="false" autocomplete="off" id="revised" maxlength="50000" aria-label="Revised lease wording" rows="4"></textarea><button id="compare">Compare versions</button><div id="diff" aria-live="polite"></div></details><section class="card" style="margin-top:16px"><h2>Renter’s pack</h2><p><strong>₮10,000 one-time</strong> · Coming soon</p><p class="small">A deposit checklist, Mongolian messages for your landlord, and a move-in condition form.</p></section></main><footer>LeaseLens · Text stays in this tab unless you save it to your account. Matching uses keywords in English and Mongolian and may miss related clauses.</footer>
+<script>
+document.getElementById('enter').onclick=()=>{document.querySelector('main').hidden=false;document.getElementById('gate').hidden=true;document.getElementById('promise').focus()};
+const el=id=>document.getElementById(id), norm=s=>s.toLowerCase().normalize('NFKC').replace(/[^\p{L}\p{N}]+/gu,' ').trim(), segments=s=>s.split(/(?<=[.!?])\s+|[\r\n]+/u).map(x=>x.trim()).filter(Boolean);
+const topics=[/heat|heating|utility|utilities|халаалт|дулаан|ашиглалт/,/deposit|refund|барьцаа|буцаа/,/pet|animal|амьтан/,/repair|maintenance|засвар/,/parking|garage|зогсоол/,/notice|termination|цуцлах|мэдэгд/,/rent increase|rent rise|түрээсийн нэмэгдэл/];
+function evidence(p,s){const words=norm(p).split(' ').filter(w=>w.length>2&&!['the','landlord','said','that','would','included','rent','was','will','and','for','with','paid','can','tenant','our','гэрээ','түрээс'].includes(w));const groups=topics.filter(t=>t.test(norm(p)));return segments(s).filter(q=>groups.some(t=>t.test(norm(q)))||words.some(w=>norm(q).split(' ').includes(w)))}
+function line(parent,tag,value){const n=document.createElement(tag);n.textContent=value;parent.append(n)}
+function reset(){el('report').hidden=true;el('blank').hidden=false;el('diff').replaceChildren();el('error').textContent='';el('copy').textContent=translate('Copy question')}
+for(const id of ['promise','lease'])el(id).oninput=reset;
+el('sample').onclick=()=>{reset();el('promise').value='Heating is included in the rent.';el('lease').value='3.1 Monthly rent is ₮1,200,000.\n3.2 The tenant shall pay all utilities separately.\n4.1 The security deposit is equal to one month of rent.';if(root.lang==='mn'){el('promise').value='Халаалтын төлбөр түрээсэнд багтсан.';el('lease').value='3.1 Сарын түрээс 1,200,000₮.\n3.2 Түрээслэгч ашиглалтын зардлыг тусад нь төлнө.\n4.1 Барьцаа нь нэг сарын түрээстэй тэнцэнэ.'}el('form').requestSubmit()};
+el('form').onsubmit=e=>{e.preventDefault();reset();let p=el('promise').value.trim(),s=el('lease').value.trim();if(!p||!s){el('error').textContent=translate('Enter a promise and lease wording.');return}const matches=evidence(p,s);el('blank').hidden=true;el('report').hidden=false;el('quotes').replaceChildren();matches.slice(0,100).forEach(q=>line(el('quotes'),'blockquote',q));const exact=matches.some(q=>norm(q)===norm(p));el('status').textContent=exact?translate('Same wording found'):matches.length?translate('Related wording to review'):translate('No keyword match');el('why').textContent=matches.length>100?translate('Showing the first 100 matching passages. Review the full document.'):matches.length?translate('Read the quoted wording alongside your promise. Related terms may differ or conflict.'):translate('Try another spelling or check the full document for different wording.');el('message').textContent=question(p)};
+el('copy').onclick=async()=>{try{await navigator.clipboard.writeText(el('message').textContent);el('copy').textContent=translate('Copied')}catch{el('copy').textContent=translate('Select the question to copy')}};
+el('import').onclick=()=>el('file').click();el('file').onchange=async e=>{const f=e.target.files[0];if(!f)return;reset();if(f.size>1000000||!f.name.toLowerCase().endsWith('.txt')){el('error').textContent=translate('Choose a .txt file under 1 MB.')}else{try{const content=await f.text();if(content.length>50000)throw Error();el('lease').value=content}catch{el('error').textContent=translate('Could not import file. Use plain text up to 50,000 characters.')}}e.target.value=''};
+function difference(a,b){const count=new Map();for(const x of b)count.set(x,(count.get(x)||0)+1);return a.filter(x=>{if(!count.get(x))return true;count.set(x,count.get(x)-1);return false})}
+el('revised').oninput=()=>el('diff').replaceChildren();el('compare').onclick=()=>{const a=segments(el('lease').value),b=segments(el('revised').value),d=el('diff');d.replaceChildren();if(!a.length||!b.length){line(d,'p',translate('Enter both the original and revised lease wording.'));return}const add=difference(b,a),remove=difference(a,b);for(const [label,items] of [[translate('Added'),add],[translate('Removed'),remove]])if(items.length){line(d,'h4',label);items.forEach(x=>line(d,'blockquote',x))}if(!add.length&&!remove.length)line(d,'p',a.join('\n')===b.join('\n')?translate('No sentence changes found.'):translate('The sentence order changed.'))};
+
+const mn = {
+  "Promise checker": "Тохиролцоо шалгах",
+  "Adults only": "18 ба түүнээс дээш насныханд",
+  "LeaseLens is for renters aged 18 or older. Your confirmation lasts until you reload this page.": "LeaseLens нь 18 нас хүрсэн түрээслэгчдэд зориулагдсан. Хуудсыг дахин ачаалахад насаа дахин баталгаажуулна.",
+  "I am 18 or older": "Би 18 нас хүрсэн",
+  "Renter’s toolkit": "Түрээслэгчийн хэрэгсэл",
+  "Your deal,": "Тохиролцоогоо",
+  "in writing.": "бичгээр баталгаажуул.",
+  "Compare what your landlord promised with what your lease says, before you pay the deposit.": "Барьцаагаа төлөхөөс өмнө байрны эзэнтэй тохирсон нөхцөл гэрээнд хэрхэн туссаныг шалгаарай.",
+  "Rental agreement": "Түрээсийн гэрээ",
+  "Heating included?": "Халаалт багтсан уу?",
+  "Try a sample": "Жишээгээр турших",
+  "What did your landlord promise?": "Байрны эзэнтэй юу гэж тохирсон бэ?",
+  "E.g. Heating is included in the rent.": "Жишээ нь: Халаалтын төлбөр түрээсэнд багтсан.",
+  "Lease wording": "Гэрээний заалт",
+  "Open .txt file": ".txt файл нээх",
+  "Paste the lease or the clauses you want to check…": "Шалгах гэрээ эсвэл заалтаа энд хуулна уу…",
+  "Check my promise": "Тохиролцоог шалгах",
+  "Your comparison": "Шалгалтын үр дүн",
+  "Start with a promise": "Тохирсон нөхцөлөө оруулна уу",
+  "Related lease wording and a question for your landlord will appear here.": "Холбогдох заалт болон байрны эзнээс асуух асуулт энд харагдана.",
+  "Ask your landlord": "Байрны эзнээс асуух асуулт",
+  "Copy question": "Асуултыг хуулах",
+  "Compare a revised lease": "Гэрээний шинэ хувилбарыг харьцуулах",
+  "Paste the revised wording below to see which sentences were added or removed from the lease above.": "Шинэчилсэн гэрээг доор хуулж, нэмэгдсэн болон хасагдсан өгүүлбэрүүдийг харна уу.",
+  "Revised lease wording": "Шинэчилсэн гэрээний заалт",
+  "Compare versions": "Хувилбаруудыг харьцуулах",
+  "Renter’s pack": "Түрээслэгчийн багц",
+  "₮10,000 one-time": "10,000₮ · Нэг удаагийн төлбөр",
+  "· Coming soon": "· Удахгүй худалдаанд гарна",
+  "A deposit checklist, Mongolian messages for your landlord, and a move-in condition form.": "Барьцаа төлөхийн өмнөх жагсаалт, байрны эзэнд илгээх бэлэн зурвасууд, байр хүлээн авах маягт.",
+  "LeaseLens · Text stays in this tab unless you save it to your account. Matching uses keywords in English and Mongolian and may miss related clauses.": "LeaseLens · Дансандаа хадгалаагүй текст зөвхөн энэ цонхонд үлдэнэ. Англи, монгол түлхүүр үгээр хайдаг тул зарим холбогдох заалт орхигдож болно.",
+  "Same wording found": "Ижил өгүүлбэр олдлоо",
+  "Related wording to review": "Холбогдох заалтыг нягтална уу",
+  "No keyword match": "Түлхүүр үг таарсангүй",
+  "Showing the first 100 matching passages. Review the full document.": "Эхний 100 тохирлыг харуулж байна. Гэрээг бүтнээр нь нягтална уу.",
+  "Read the quoted wording alongside your promise. Related terms may differ or conflict.": "Эш татсан заалтыг тохиролцоотойгоо харьцуулна уу. Нөхцөлүүд зөрж болзошгүй.",
+  "Try another spelling or check the full document for different wording.": "Өөр үгээр хайх эсвэл гэрээг бүтнээр нь уншина уу.",
+  "Enter a promise and lease wording.": "Тохирсон нөхцөл болон гэрээний заалтыг оруулна уу.",
+  "Copied": "Хууллаа",
+  "Select the question to copy": "Асуултыг сонгоод хуулна уу",
+  "Choose a .txt file under 1 MB.": "1 МБ-аас бага .txt файл сонгоно уу.",
+  "Could not import file. Use plain text up to 50,000 characters.": "Файлыг оруулж чадсангүй. 50,000 хүртэлх тэмдэгттэй текст файл сонгоно уу.",
+  "Enter both the original and revised lease wording.": "Гэрээний эх болон шинэ хувилбарыг хоёуланг оруулна уу.",
+  "Added": "Нэмэгдсэн",
+  "Removed": "Хасагдсан",
+  "No sentence changes found.": "Өгүүлбэрүүд өөрчлөгдөөгүй байна.",
+  "The sentence order changed.": "Өгүүлбэрийн дараалал өөрчлөгдсөн байна.",
+  "Dark mode": "Бараан горим",
+  "Language": "Хэл",
+  "LeaseLens — Promise checker": "LeaseLens — Тохиролцоо шалгах"
+};
+const root = document.documentElement;
+const language = document.querySelector('#language');
+const theme = document.querySelector('#theme');
+const setting = key => { try { return localStorage.getItem('leaselens.'+key) } catch { return null } };
+function save(key,value){ try {localStorage.setItem('leaselens.'+key,value)} catch {} }
+const translate = text => root.lang==='mn' ? (mn[text] || text) : text;
+const textBindings = [];
+const walker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+while(walker.nextNode()){
+ const node=walker.currentNode, key=node.data.trim();
+ if(Object.hasOwn(mn,key)) textBindings.push([node,node.data,key]);
+}
+const attributes=[...document.querySelectorAll('[placeholder],[aria-label]')].flatMap(n=>['placeholder','aria-label'].filter(a=>n.hasAttribute(a)).map(a=>[n,a,n.getAttribute(a)]));
+function question(p){return root.lang==='mn' ? 'Бид “'+p+'” гэж тохирсон. Энэ нөхцөлийг гэрээний аль заалтад тусгасныг хэлж, эцсийн хувилбарт тодорхой бичиж өгнө үү?' : 'We discussed “'+p+'” Could you confirm where the lease covers this and write the agreed terms into the final copy?'}
+function applyLanguage(){
+ root.lang=language.value;
+ for(const [node,original,key] of textBindings) node.data=original.replace(key,translate(key));
+ for(const [node,attribute,key] of attributes) node.setAttribute(attribute,translate(key));
+ document.title=translate('LeaseLens — Promise checker');
+ for(const node of document.querySelectorAll('#status,#why,#error,#copy,#diff h4,#diff p')){
+  const value=node.textContent.trim();
+  const key=Object.keys(mn).find(k=>k===value||mn[k]===value);
+  if(key) node.textContent=translate(key);
+ }
+ if(!document.querySelector('#report').hidden) document.querySelector('#message').textContent=question(document.querySelector('#promise').value.trim());
+}
+language.value=setting('language')==='mn'?'mn':'en';
+language.onchange=()=>{save('language',language.value);applyLanguage()};
+applyLanguage();
+const scheme=matchMedia('(prefers-color-scheme: dark)');
+function applyTheme(dark){root.dataset.theme=dark?'dark':'light';theme.setAttribute('aria-pressed',String(dark))}
+applyTheme(setting('theme')?setting('theme')==='dark':scheme.matches);
+scheme.addEventListener('change',e=>{if(!setting('theme'))applyTheme(e.matches)});
+theme.onclick=()=>{applyTheme(root.dataset.theme!=='dark');save('theme',root.dataset.theme)};
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</html>

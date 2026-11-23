@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "An English and Mongolian rental comparison tool. Compare a landlord’s promise with lease wording, inspect matching passages, and compare revised drafts. Matching uses keywords. The interface supports light and dark themes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bagasanchi/LeaseLens.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bagasanchi/LeaseLens/issues"
+  },
+  "homepage": "https://github.com/Bagasanchi/LeaseLens#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
